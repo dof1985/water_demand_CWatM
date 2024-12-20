@@ -39,46 +39,46 @@ Fridman, D., & Burek, P. (2024). High resolution gridded population aligned with
 ### Variable list (see settings):
 
 #### paths: defines the folder structure
-*data_main:define the model path on the local machine
-*maps_dir: all input maps (except population grids)
-*industryMaps_dir: sub-folder of 'maps-dir' - includes baseline industrial water withdrawal maps
-*table_dir: all input tables
-*population_dir: users shall store the population grid here.
-*output_dir: a folder to which outputs are saved 
+- data_main:define the model path on the local machine
+- maps_dir: all input maps (except population grids)
+- industryMaps_dir: sub-folder of 'maps-dir' - includes baseline industrial water withdrawal maps
+- table_dir: all input tables
+- population_dir: users shall store the population grid here.
+- output_dir: a folder to which outputs are saved 
 
 #### model_options:
-*save_outputs: if 'true', gridded results are saved
-*interpolateFutureGDP: if 'true', year specific GDP values are interpolated on-the-fly. Assumes, one data point every 10 years
-*gdp_timeseries_5years: if 'true', on-the-fly interpolation handles one data point every 5 years
+- save_outputs: if 'true', gridded results are saved
+- interpolateFutureGDP: if 'true', year specific GDP values are interpolated on-the-fly. Assumes, one data point every 10 years
+- gdp_timeseries_5years: if 'true', on-the-fly interpolation handles one data point every 5 years
 
 #### model_params:
-*future_run: if 'true', runs a workflow to project water withdrawal into the future
-*ssp: if 'future_run' is set to 'true', used to define the SSP
-*pop_baseline_year: indicate the first year for which population grids are available
-*start_year: first year for which outputs are required
-*end_year: last year for which outputs are required
-*past_refYear: reference year of domestic & industrial water withdrawal.
-*resolution: spatial resolution of output (degrees), '1./12.' (5 arc minutes), 0.5, etc
-*lat_south: the most southern latitude in the extent of the ouputs (set to 60 to cut Antartica out, at 5 arc minutes)
-*energy_ssprcp: ssp-rcp combination of available IAM outputs regarding energy consumption and electricity demand
+- future_run: if 'true', runs a workflow to project water withdrawal into the future
+- ssp: if 'future_run' is set to 'true', used to define the SSP
+- pop_baseline_year: indicate the first year for which population grids are availabl
+- start_year: first year for which outputs are required
+- end_year: last year for which outputs are required
+- past_refYear: reference year of domestic & industrial water withdrawal.
+- resolution: spatial resolution of output (degrees), '1./12.' (5 arc minutes), 0.5, etc
+- lat_south: the most southern latitude in the extent of the ouputs (set to 60 to cut Antartica out, at 5 arc minutes)
+- energy_ssprcp: ssp-rcp combination of available IAM outputs regarding energy consumption and electricity demand
 
 #### model_weights: 
-*gdpWeight: weights for the impact of GDP on the economic function under different scenarios
-*techWeight: weight for the impact of the tecnological inputs on the economic function
-*econWeight: weight for the imapct of the economic function on the  water withdrawal
+- gdpWeight: weights for the impact of GDP on the economic function under different scenarios
+- techWeight: weight for the impact of the tecnological inputs on the economic function
+- econWeight: weight for the imapct of the economic function on the  water withdrawal
 
 #### maps: 
-*base_grid: template grid
-*countries: countries categorical grid
-*industry_base: filename of the baseline maps for industrial ww
-*pop_urb: filename of the gridded urban population (use %s to account for 'hist' or ssp)
-*pop_rur: filename of the gridded rural population (use %s to account for 'hist' or ssp)
+- base_grid: template grid
+- countries: countries categorical grid
+- industry_base: filename of the baseline maps for industrial ww
+- pop_urb: filename of the gridded urban population (use %s to account for 'hist' or ssp)
+- pop_rur: filename of the gridded rural population (use %s to account for 'hist' or ssp)
 
 #### tables: 
-*domcap_ww: filename of the baseline table for domestic ww per capita
-*gdpcap: filename of gdp per capita table (use %s to account for ssp)
-*driverscap: filename of other drivers (energy, electricity, household income) table (use %s to account for ssp)
-*recycleTbl: filename of recycling ratio per country
-*ipccRegionsTbl: filename of regions classification table
-*techImprvIndTbl: filename of technological improvement coefficients for industrial sector (use %s to account for ssp)
-*techImprvDomTbl: filename of technological improvement coefficients for domestic sector (use %s to account for ssp)
+- domcap_ww: filename of the baseline table for domestic ww per capita
+- gdpcap: filename of gdp per capita table (use %s to account for ssp)
+- driverscap: filename of other drivers (energy, electricity, household income) table (use %s to account for ssp)
+- recycleTbl: filename of recycling ratio per country
+- ipccRegionsTbl: filename of regions classification table
+- techImprvIndTbl: filename of technological improvement coefficients for industrial sector (use %s to account for ssp)
+- techImprvDomTbl: filename of technological improvement coefficients for domestic sector (use %s to account for ssp)
