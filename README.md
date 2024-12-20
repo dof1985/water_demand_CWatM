@@ -9,6 +9,7 @@ the CWATM 5 arcminutes water withdrawal input data (at a global scale).
 
 ### When using this workflow please use the following citation:
 
+Dor Fridman, Wada, Y., & Burek, P. (2024). dof1985/water_demand_CWatM: Water demand workflow for CWatM-Global (5 arcminutes) (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.14536377
 
 ### Original workflow is described in:
 Wada, Y., van Beek, L. P. H., and Bierkens, M. F. P. (2011a). Modelling global water stress
