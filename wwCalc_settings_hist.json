@@ -1,0 +1,47 @@
+{   
+  "paths": {
+	"data_main": "PUT_MAIN_DATA_FOLDER_PATH_HERE",
+    "maps_dir": "$[data_main]/maps/",
+    "industryMaps_dir": "$[data_main]/maps/industry/",
+    "table_dir": "$[data_main]/table/",
+    "population_dir": "$[data_main]/population/%s/",
+	"output_dir":  "$[data_main]/outputs/"
+  },
+  "model_options": {
+	"save_outputs":true,
+	"interpolateFutureGDP":true,
+	"gdp_timeseries_5years":false
+  },
+  "model_params": {
+    "future_run": false,
+	"ssp": "hist",
+	"pop_baseline_year": 1960,
+	"start_year": 1960,
+	"end_year": 2019,
+	"past_refYear": 2020,
+	"resolution": "1./12.",
+	"lat_south": -60,
+	"energy_ssprcp":{"ssp1":"rcp4p5", "ssp2":"rcp6p0", "ssp3":"rcp6p0", "ssp5":"rcp6p0"}
+  },
+  "model_weights": {
+	  "gdpWeight": {"hist":3, "ssp1":0.6, "ssp2":0.85, "ssp3":0.8, "ssp5":0.8},
+	  "techWeight": 0.5,
+	  "econWeight": 0.1
+  },
+  "maps": {
+	 "base_grid": "clone_5min_new.nc",
+	 "countries": "countries_5min_new.nc",
+	 "industry_base": "ind_baseline_5min.nc",
+	 "pop_urb":"population_urban_%s_interpolate.nc",
+	 "pop_rur":"population_rural_%s_interpolate.nc"
+  },
+  "tables": {
+	  "domcap_ww": "dompcww_WB2020_df.tbl",
+	  "gdpcap": "gdp_capita_1960-2020_DF.tbl",
+	  "driverscap": "%s_capita_1960-2010.tbl",
+	  "recycleTbl": "recycling_ratio_1960-2016.tbl",
+	  "ipccRegionsTbl":"ipcc_sres_regions.tbl",
+	  "techImprvIndTbl": "tech_country_%s_change.tbl",
+	  "techImprvDomTbl": "tech_country_%s_change.tbl"
+  }
+}
